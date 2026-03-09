@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CocktailsResponse } from "@/type/cocktail";
+import { CocktailsRes } from "@/type/cocktail";
 
 /*
 https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
@@ -11,19 +11,19 @@ const api = axios.create({
   baseURL: "https://www.thecocktaildb.com/api/json/v1/1",
 });
 
-export const getCocktails = async (): Promise<CocktailsResponse> => {
+export const getCocktails = async (): Promise<CocktailsRes> => {
   const res = await api.get("/search.php?s=margarita");
   return res.data;
 };
 
 export const getCocktailById = async (
   id: string
-): Promise<CocktailsResponse> => {
+): Promise<CocktailsRes> => {
   const res = await api.get(`/lookup.php?i=${id}`);
   return res.data;
 };
 
-export const getRandomCocktail = async (): Promise<CocktailsResponse> => {
+export const getRandomCocktail = async (): Promise<CocktailsRes> => {
   const res = await api.get("/random.php");
   return res.data;
 };

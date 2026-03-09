@@ -24,6 +24,6 @@ export type Drink = {
   strIngredient15?: string;
 };
 
-export type CocktailsResponse = {
+export type CocktailsRes = {
   drinks: Drink[];
 };
