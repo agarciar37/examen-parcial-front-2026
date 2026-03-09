@@ -12,7 +12,7 @@ export default async function CocktailDetail({ params }: PageProps) {
   const drink = data.drinks?.[0];
 
   if (!drink) {
-    return <p>No se encuentra.</p>;
+    return <p>No se encuentra</p>;
   }
 
   const ingredients = [
